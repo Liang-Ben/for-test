@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书推荐</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body>
+    <!--css先放浮动，desplay然后盒子，然后文字 -->
+    <div class="wrapper header">
+        <h1><a class="logo" href="#"><img title="haha" src="./images/图书.png" alt=""></a></h1>
+    <!-- Img为行内替换元素，除非在标签内修改，外部导入css无效-->
+       <div class="nav">
+            <ul>
+                <li><a href="#"><i><del><u>首<hr>页</u></del></i></a></li>
+                <li><a href="#"><b>书籍</b></a></li>
+                <li><a href="./14.html" target="_blank">猜你喜欢</a></li>
+            </ul>
+        </div>
+        
+        <div class="search">
+            <input type="text" value="123456aa"  >
+            <button ></button>
+        </div>
+
+        <div class="user">
+            <img src="images/图书.png" alt="">
+            <span>hahaha</span>
+        </div>
+        <div class="audio">
+            <audio src="../../lol.mp3" loop controls></audio>
+        </div>
+    </div>                            
+    <div class="banner">
+        <div class="wrapper">
+            <div class="left">
+                    <ul>
+                        <li><a href="#">学成在线<span>></span></a></li>
+                        <li><a href="#">学成在线<span>></span></a></li>
+                        <li><a href="#">学成在线<span>></span></a></li>
+                        <li><a href="#">学成在线<span>></span></a></li>
+                        <li><a href="#">学成在线<span>></span></a></li>
+                        <li><a href="#">学成在线<span>></span></a></li>
+                        <li><a href="#">学成在线<span>></span></a></li>
+                    </ul>
+            </div>
+            <div class="right">
+                <div class="top">
+                    <h2>学习网站</h2>
+                </div>
+                <div class="middle">
+                    <dl>
+                        <dt>学习知识</dt>
+                        <dd>就来我这里</dd>
+                    </dl>
+                    <dl>
+                        <dt>学习知识</dt>
+                        <dd>就来我这里</dd>
+                    </dl>
+                    <dl>
+                        <dt>学习知识</dt>
+                        <dd>就来我这里</dd>
+                    </dl>
+                </div>
+                <div class="bottom">
+                    <a class="button" href="#">点击学习</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="goods">
+        <h2>精品推荐</h2>
+        <ul>
+            <li><a href="#">javaweb</a></li>
+            <li><a href="#">javaweb</a></li>
+            <li><a href="#">javaweb</a></li>
+            <li><a href="#">javaweb</a></li>
+            <li><a href="#">javaweb</a></li>
+        </ul>
+        <a class="a2" href="#">在线课程</a>
+    </div>
+    <div class="goods2 clearfix">
+        <ul>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+        </ul>
+    </div>
+    <div >
+        <dl class="dl1">
+            <dt>这是个标题</dt>
+            <dd>haha</dd>
+            <dd>haha</dd>
+            <dd>haha</dd>
+            <dd>haha</dd>
+            <dd>haha</dd>
+            <dd>haha</dd>
+   
+        </dl>
+        <ol class="ol1">
+            <li>haha&nbsp&nbsp&nbsp&nbspahha</li>
+            <li>hahaahha</li>
+            <li>hahaahha</li>
+            <li>hahaahha</li>
+            <li>hahaahha</li>
+            <li>hahaahha</li>
+            <li>hahaahha</li>
+        </ol>
+        <div class="table">
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td colspan="2">3我是合并列</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">5我是合并行</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+            </table>
+            <div class="input">
+                <form>
+                <input type="text" value="haha">
+                <input type="password" value="haha">
+                <input name="lala" type="radio">
+                <input name="lala" type="radio">
+                <input type="file" multiple>
+                <input id="111" name="haha" type="checkbox">
+                <label for="111">111</label>
+                <input id="222" name="haha" type="checkbox">
+                <label for="222">222</label>
+                <input id="333" name="haha" type="checkbox">
+                <label for="333">333</label>
+                <input type="submit">
+                <input type="reset">
+                <input type="button">
+                <button type="button">button</button>
+                <button type="reset">reset</button>
+                <button type="submit">submit</button>
+                <select>
+                    <option>111</option>
+                    <option>111</option>
+                    <option>111</option>
+                    <option>111</option>
+                    <option>111</option>
+                </select>
+                <textarea rows="10" cols="100"></textarea>
+            </form>
+            </div>
+        </div>
+        <input class="input2" type="text" value="123456" >
+        <div class="divlast"></div>
+    </div>
+
+
+
+
+
+    <script>
+        var div = document.querySelector('.divlast');
+        var flag = 0;
+        div.onclick = function(){
+            if(flag == 0){
+                div.className = 'divlast divlast2';
+                flag = 1;
+            }else{
+                div.className = 'divlast';
+                flag = 0;
+            }
+        }
+        // var time = prompt();
+        // console.log(typeof time);
+        // var a = time<10? '0'+time:time;
+        // console.log(typeof time);
+        // console.log(a);
+    
+        // var arr = [5,4,2,2];
+        // var arr1 = [1,2];
+        // var arr2 = arr.slice(0,1);//只截取，不影响,按照索引截取的。
+        // console.log(arr.slice(1,2));
+        // console.log(arr.splice(0,2));//真删啊，开头和删除数量，影响旧的数组。
+        // console.log(arr);
+    //  冒泡
+    // for(i = 0 ; i < arr.length - 1 ; i++){
+    //     for(j = 0 ; j < arr.length -1 - i ; j++){
+    //         if(arr[j]>arr[j+1]){
+    //             var temp = arr[j];
+    //             arr[j] = arr[j+1];
+    //             arr[j+1] = temp;
+    //             }
+    //     }
+    // }
+    // console.log(arr);
+    //冒泡函数封装
+    // function sort(arr){
+    //     for(var i = 0;i<arr.length - 1;i++)
+    //         for(var j = 0;j<arr.length - i -1;j++)
+    //         if(arr[j]>arr[j+1]){
+    //             var temp = arr[j];
+    //             arr[j]=arr[j + 1];
+    //             arr[j + 1]=temp;
+    //         }
+    //     return arr
+    // }
+    // console.log(sort(arr));
+    // 函数，最大值
+        // function max(arr){
+        //     var max = arr[0];
+        //     for(var i = 1; i < arr.length; i++){
+        //         if(arr[i]>max)
+        //             max = arr[i];
+        //     }
+        //     return max;
+        // }
+        // // var max = max(arr);
+        // console.log(max(arr));
+    
+        // var str = 'abcoefoxyozzopp';
+        // var o ={};
+        // for(var i = 0; i< str.length;i++){
+        //     var chars = str.charAt(i);
+        //     if(o[chars]){
+        //         o[chars]++;
+        //     }   
+        //     else{
+        //         o[chars]=1;
+        //     } 
+        // }
+            // var input = document.getElementsByClassName("search");
+            // // var put = input.querySelector('input');
+            // // console.dir(put);
+            // var x = document.querySelector(".input2");
+            // console.log(x.value);
+            // x.setAttribute('placeholder','123456789');
+            // console.log(x.placeholder);
+        </script>
+</body>
+
+</html>

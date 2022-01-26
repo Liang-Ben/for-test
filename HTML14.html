@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .c{
+        display: flex;
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: pink;
+
+    }
+    .d{
+        padding: 0px;
+        width: 30px;
+        height: 100px;
+        background-color: blue;
+    }
+    .trigle{
+        position: absolute;
+        bottom: -9.5px;
+        left: 20px;
+        border-top: 10px solid blue;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        width: 0;
+        height: 0;
+    }
+    .mask{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color:rgb(102, 102, 102);
+        opacity: 0.7;
+        z-index : 1;
+    }
+    body{
+        height: 3000px;
+    }
+    </style>
+</head>
+<body class="body">
+    <div class="mask"></div>
+    <div class="c">
+        哈哈哈我是测试文字
+        <div class="d">哈哈哈我是测试文字</div>
+        <div class="trigle"></div>
+    </div>
+    
+ 
+    <script>
+        var d = document.querySelector(".d");
+        var body = document.querySelector('.body');
+        console.log(d.clientHeight+'client');
+        console.log(d.scrollHeight+'scroll');
+        setInterval(function(){console.log(pageYOffset);},1000)
+        
+        // var c = document.querySelector('.c');
+        // var timer = setTimeout(hide,3000);
+        // function hide(){
+        //     c.style.display = 'none';
+        // }
+
+        // document.addEventListener('keyup',function(){
+        //     console.log('弹起力');
+        // })
+        // document.addEventListener('keypress',function(){
+        //     console.log('press力');
+        // }) 
+        // document.addEventListener('keydown',function(){
+        //     console.log('down力');
+        // })
+        //下面是contextmenu 阻止右键菜单
+        // var d = document.querySelector('.d');
+        // d.addEventListener('contextmenu',function(e){
+        //     e.preventDefault();
+        // })
+        //下面是事件冒泡
+        // var d = document.querySelector('.d');
+        // var c = document.querySelector('.c');
+        // d.addEventListener('click',function(){
+        //     alert('我是d,子  div');
+        // })
+        // c.addEventListener('click',function(){
+        //     alert('我是c，父  div');
+        // })
+
+        //字符串join方法比直接create要快。
+        // var inner = new Array();
+        // var data = +new Date();
+        // for(var i = 0;i<100000;i++){
+        //     inner.push("<div></div>");
+        // }
+        // var div = document.querySelector('.c');
+        // div.innerHTML = inner.join('');
+
+        // var data3 = +new Date();
+        // var a = document.createElement('div');
+        // for(var i=0;i<100000;i++){
+        //     div.appendChild(a);
+        // }
+        // var data2 = +new Date();
+        // console.log(data3 - data);
+        // console.log(data2 - data3);
+
+        // var c = document.querySelector('.c');
+        // var div = document.createElement('li');
+        // var p = document.createElement('p');
+        // c.insertBefore(div,c.children[0]);
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="username" type="text">
+    <label for="check">记住用户名</label>
+    <input id="check" class="check" type="checkbox">
+    <button id="btn">dianji</button>
+    <script>
+        var btn = document.querySelector('#btn');
+        var username = document.querySelector('#username');
+        var check = document.querySelector('#check');
+        username.style.color = 'red';
+        btn.addEventListener('click', function(){console.log(username.value);})
+        if(localStorage.getItem('username')){
+            console.log('查询到了username');
+            username.value = localStorage.getItem('username');
+            check.checked = true;
+        }
+        check.addEventListener('change',function(){
+            
+            if(this.checked){
+                if(username.value==''){
+                    alert('请先填写，不能保存空值');
+                    this.checked = false;//这个不会触发change事件。
+                }else{
+                localStorage.setItem('username',username.value);
+                console.log('存进去了'+username.value);
+                }
+            }else{
+                localStorage.removeItem('username');
+                console.log('删掉了'+'username');
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out{
+            position: absolute;
+            display: flex;
+            width: 600%;
+            margin: 0 auto;   
+            list-style: none;
+            padding-left: 0;
+        }
+        .thebox{
+            overflow: hidden;
+            position: relative;
+            left: 300px;
+            top: 100px;
+            height: 300px;
+            width: 300px;
+            border: 3px black solid;
+        }
+        .out div{
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            line-height: 300px;
+            color: white;
+            font-size: 120px;
+            font-weight: 700;}
+        .m{
+            background-color: darkred;
+        }
+        .h{
+            background-color: hotpink;
+        }
+        .s{
+            background-color: cadetblue;
+        }
+        .left,.right{
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background-color: indigo;
+            z-index: 2;
+            display: none;
+        }
+        .left{
+            left: 0;
+            top: 50%;
+        }
+        .right{
+            right: 0;
+            top: 50%;
+        }
+        .li{
+            margin-right:  10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: black;
+            opacity: 0.3;
+
+        }
+        .ol{
+            position: absolute;
+            display: flex;
+            left: 30%;
+            top: 80%;
+            justify-content: space-around;
+            list-style: none;
+        }
+        .ent{
+            margin-right:  10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            opacity: 1;
+            z-index: 100;
+        }
+        .right2{
+            position: fixed;
+            right: 0;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+        body{
+            height: 30000px;
+        }
+    </style>
+    <script src="../js/index.js"></script>
+    <script src="../js/lunbotu.js"></script>
+</head>
+<body>
+    <div class="thebox">
+        <div class="left"></div>
+        <div class="right"></div>
+            <ul class="out">
+                <li><div class="h">1</div></li>
+                <li><div class="m">1</div></li>
+                <li><div class="s">1</div></li>
+            </ul>
+            <ol class="ol">
+
+            </ol>
+        </div>
+    </div>
+    <div class="right2">
+    </div>
+
+</body>
+<script>
+    var a = document.getElementById('class');
+    var i = document.querySelector('div');
+    var x = document.getElementsByClassName('.class');
+    console.log(a,x);
+    console.log(i);
+    var out = document.querySelector('.out');
+    var h = document.querySelector('.h');
+    var m = document.querySelector('.m');
+    var s = document.querySelector('.s');
+    var time2 = +new Date('2022-1-23 15:15:15');
+    lefttime();
+    function lefttime(){
+        var time = +new Date();
+        var time3 = time2-time;
+        var lefttime = time3 / 1000 ;
+        var hour = parseInt(lefttime / 60 / 60 % 24);
+        
+        var min = parseInt(lefttime / 60 % 60);
+        
+        var sec = parseInt(lefttime % 60);
+        
+        // if(hour<10){hour = '0'+hour};
+        // if(min<10){min = '0'+min};
+        // if(sec<10){sec = '0'+sec};
+        hour=hour<10?'0'+hour:hour;
+        min=min<10?'0'+min:min;
+        sec=sec<10?'0'+sec:sec;
+        h.innerHTML = hour;
+        m.innerHTML = min;
+        s.innerHTML = sec;
+    }
+    setInterval(lefttime,1000);
+
+ 
+    console.log(out.offsetLeft);
+</script>
+</html>
